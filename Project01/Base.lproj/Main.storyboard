@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ylW-ZL-NI3">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tIv-NM-SKN">
+            <objects>
+                <viewController id="r2O-Nq-ELH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9iK-aq-phY"/>
+                        <viewControllerLayoutGuide type="bottom" id="juO-TH-6Ry"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R7H-Y3-xfL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSl-7I-vIt">
+                                <rect key="frame" x="248" y="474" width="56" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="스크린샷 2017-10-15 오전 1.25.16.png"/>
+                                <connections>
+                                    <segue destination="VL8-FI-ea0" kind="show" id="wxK-Fz-cOc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96538406610000005" green="0.86178475619999995" blue="0.78006827830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O2B-uC-VZb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SK8-fl-Zor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343.125" y="221.83098591549296"/>
+        </scene>
+        <!--계좌 정보 추가-->
+        <scene sceneID="ypI-Gg-U35">
+            <objects>
+                <viewController id="VL8-FI-ea0" customClass="ViewController" customModule="Project01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XsS-1U-mVK"/>
+                        <viewControllerLayoutGuide type="bottom" id="PnA-0a-juI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GHd-e5-FuW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="예금주 이름 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPd-YB-Px6">
+                                <rect key="frame" x="132" y="155" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VL8-FI-ea0" id="h34-sr-Hl4"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="계좌번호 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-Yi-dBS">
+                                <rect key="frame" x="132" y="373" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VL8-FI-ea0" id="9Tq-WP-DZQ"/>
+                                </connections>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjy-vI-7A0">
+                                <rect key="frame" x="132" y="227" width="165" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VL8-FI-ea0" id="L5K-st-m6Q"/>
+                                    <outlet property="delegate" destination="VL8-FI-ea0" id="EO2-jk-cyw"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="peo1.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="YLv-i2-Hbe">
+                                <rect key="frame" x="38" y="148" width="51" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="up.png" translatesAutoresizingMaskIntoConstraints="NO" id="1BJ-oS-vd6">
+                                <rect key="frame" x="38" y="252" width="51" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lst.png" translatesAutoresizingMaskIntoConstraints="NO" id="d6w-so-xWc">
+                                <rect key="frame" x="38" y="365" width="51" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZb-Uv-NDh">
+                                <rect key="frame" x="0.0" y="420" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJD-N5-wgj">
+                                        <rect key="frame" x="0.0" y="8" width="320" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.97598630190000002" green="0.94538336990000005" blue="0.91582328079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96538406610000005" green="0.86178475619999995" blue="0.78006827830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJp-VG-1L8">
+                                <rect key="frame" x="273" y="72" width="31" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                                <state key="normal" image="ppp.png"/>
+                                <connections>
+                                    <action selector="buttonGo:" destination="VL8-FI-ea0" eventType="touchUpInside" id="grI-lV-nNj"/>
+                                    <action selector="buttonShow:" destination="VL8-FI-ea0" eventType="touchUpInside" id="Peq-w0-fov"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96533946699999995" green="0.86258483659999996" blue="0.77955498629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="계좌 정보 추가" id="qYn-iO-Yuf"/>
+                    <connections>
+                        <outlet property="display" destination="iJD-N5-wgj" id="AzH-BU-SQE"/>
+                        <outlet property="nameText" destination="vPd-YB-Px6" id="gKZ-KV-lCn"/>
+                        <outlet property="numText" destination="ZUL-Yi-dBS" id="oRG-nG-bRk"/>
+                        <outlet property="pickerUniv" destination="mjy-vI-7A0" id="u8r-FQ-8nt"/>
+                        <outlet property="viewHidden" destination="PZb-Uv-NDh" id="y4f-hg-WT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipr-j0-5L7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1251" y="222"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ErE-Lu-SlC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ylW-ZL-NI3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VGC-lD-HdE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r2O-Nq-ELH" kind="relationship" relationship="rootViewController" id="JTw-hl-Vtm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hW1-rf-RJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-654.375" y="221.83098591549296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lst.png" width="80" height="71"/>
+        <image name="peo1.JPG" width="86" height="87"/>
+        <image name="ppp.png" width="50" height="51"/>
+        <image name="up.png" width="94" height="82"/>
+        <image name="스크린샷 2017-10-15 오전 1.25.16.png" width="71" height="72"/>
+    </resources>
+</document>
